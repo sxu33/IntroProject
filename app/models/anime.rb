@@ -4,4 +4,5 @@ class Anime < ApplicationRecord
   has_one :heat
 
   validates :title, presence: true
+  validates :favorites, numericality: true
 end
