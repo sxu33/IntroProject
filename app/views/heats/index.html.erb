@@ -1,0 +1,22 @@
+<!-- app/views/heats/index.html.erb -->
+<h1 class="text-xl font-bold my-4">Heats List</h1>
+<table class="table-auto w-full bg-white">
+  <thead class="bg-gray-800 text-white">
+    <tr>
+      <th class="px-4 py-2">Heat Value</th>
+      <th class="px-4 py-2">Anime Title</th>
+      <th class="px-4 py-2">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @heats.each do |heat| %>
+      <tr class="border-b">
+        <td class="border px-4 py-2"><%= heat.value %></td>
+        <td class="border px-4 py-2"><%= heat.anime.title %></td>
+        <td class="border px-4 py-2">
+          <%= link_to 'Show Anime', show_anime_heat_path(heat), class: "text-blue-500 hover:underline" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

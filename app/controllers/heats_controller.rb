@@ -3,8 +3,8 @@ class HeatsController < ApplicationController
     @heats = Heat.all
   end
 
-  def show_animes
+  def show_anime
     @heat = Heat.find(params[:id])
-    @animes = @heat.animes
+    @anime = @heat.anime
   end
 end
