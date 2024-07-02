@@ -1,0 +1,21 @@
+<!-- app/views/layouts/_navbar.html.erb -->
+<nav class="bg-gray-800 fixed top-0 inset-x-0 z-50 shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <div class="flex-shrink-0">
+          <a href="<%= root_path %>" class="text-white text-2xl font-bold">Anime</a>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <%= link_to 'Animes', animes_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
+            <%= link_to 'Types', types_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
+            <%= link_to 'Seasons', seasons_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
+            <%= link_to 'Heats', heats_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
+            <%= link_to 'About', about_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
