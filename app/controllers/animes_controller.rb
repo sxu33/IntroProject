@@ -1,5 +1,10 @@
 class AnimesController < ApplicationController
   def index
-    @animes = Anime.all  # 获取所有Anime记录
+    @animes = Anime.all  
   end
+
+  def show
+  @anime = Anime.find(params[:id])
+end
+
 end

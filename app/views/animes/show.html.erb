@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anime Show</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-4xl mx-auto bg-white p-6 shadow-md rounded w-full">
+    <h1 class="text-3xl font-bold mb-4"><%= @anime.title %></h1>
+    <div class="space-y-2">
+      <p><strong>ID:</strong> <%= @anime.id %></p>
+      <p><strong>Type:</strong> <%= @anime.type.name %></p>
+      <p><strong>Season:</strong> <%= @anime.season.name %></p>
+      <p><strong>Year:</strong> <%= @anime.season.year %></p>
+      <p class="break-words"><strong>Background:</strong> <%= @anime.background %></p>
+      <p><strong>Favorites:</strong> <%= @anime.favorites %></p>
+    </div>
+  </div>
+</body>
+</html>
