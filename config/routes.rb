@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       get 'show_anime'
     end
   end
-
+get 'search', to: 'search#search'
   get 'about', to: 'animes#about'
   root 'animes#index'
 end

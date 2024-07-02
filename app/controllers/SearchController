@@ -1,0 +1,10 @@
+# app/controllers/search_controller.rb
+class SearchController < ApplicationController
+  def search
+    @query = params[:query]
+    @type_id = params[:type_id]
+
+    @animes = Anime.where('title LIKE ?', "%#{@query}%")
+    @animes = @animes.where(type_id: @type_id) if @type_id.present?
+  end
+end
