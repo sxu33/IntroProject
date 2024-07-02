@@ -1,6 +1,6 @@
 class AnimesController < ApplicationController
   def index
-    @animes = Anime.all  
+    @animes = Anime.page(params[:page]).per(10)
   end
 
   def show
