@@ -1,0 +1,26 @@
+<!-- app/views/animes/about.html.erb -->
+<h1 class="text-xl font-bold my-4">About This Project</h1>
+
+<h2 class="text-lg font-semibold my-2">Data Sources</h2>
+<p>
+  This project is a Rails application that demonstrates a collection of anime, their types, seasons, and heat ratings. 
+  The data is sourced from the <a href="https://api.jikan.moe/v4/anime" class="text-blue-500 hover:underline" target="_blank">Jikan API</a>,
+   a free REST API for anime data, and the <a href="https://github.com/faker-ruby/faker" class="text-blue-500 hover:underline" target="_blank">Faker gem</a>.
+</p>
+<p>
+  The application uses four main models to represent the data:
+</p>
+<ul class="list-disc ml-5">
+  <li><strong>Anime:</strong> Represents individual anime titles with attributes such as title, background, and favorites. Data for this model is fetched from the Jikan API.</li>
+  <li><strong>Type:</strong> Represents the type of anime, such as TV, Movie, OVA, etc. Types are generated using the Faker gem for demonstration purposes.</li>
+  <li><strong>Season:</strong> Represents the season in which the anime was aired, including attributes like name (e.g., Spring, Summer) and year. Data for this model is also fetched from the Jikan API.</li>
+  <li><strong>Heat:</strong> Represents a heat rating for each anime, generated using the Faker gem to create a random value between 0 and 100 for demonstration purposes.</li>
+</ul>
+
+<h2 class="text-lg font-semibold my-2">ERD Diagram</h2>
+<img src="<%= asset_path('erd_diagram.png') %>" alt="ERD Diagram" class="w-full h-auto">
+
+<h2 class="text-lg font-semibold my-2">Functionality</h2>
+<p>
+  The application allows users to view, search, and filter anime based on different criteria. The navigation bar provides quick access to different sections of the application, including anime types, seasons, heat ratings, and an about page.
+</p>

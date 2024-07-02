@@ -7,6 +7,9 @@ class AnimesController < ApplicationController
   @anime = Anime.find(params[:id])
 end
 
+def about
+  end
+  
 def search
     @query = params[:query]
     @type_id = params[:type_id]
