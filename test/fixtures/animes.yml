@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  background: MyText
+  favorites: 1
+  type: one
+  season: one
+
+two:
+  title: MyString
+  background: MyText
+  favorites: 1
+  type: two
+  season: two
