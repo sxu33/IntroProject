@@ -1,0 +1,22 @@
+<!-- app/views/types/index.html.erb -->
+<h1 class="text-xl font-bold my-4">Type List</h1>
+<table class="table-auto w-full bg-white">
+  <thead class="bg-gray-800 text-white">
+    <tr>
+      <th class="px-4 py-2">Type Name</th>
+      <th class="px-4 py-2">Anime Count</th>
+      <th class="px-4 py-2">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @types.each do |type| %>
+      <tr class="border-b">
+        <td class="border px-4 py-2"><%= type.name %></td>
+        <td class="border px-4 py-2"><%= type.animes.count %></td>
+        <td class="border px-4 py-2">
+          <%= link_to 'Show Animes', show_animes_type_path(type), class: "text-blue-500 hover:underline" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

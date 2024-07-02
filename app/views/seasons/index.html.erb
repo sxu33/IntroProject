@@ -1,0 +1,23 @@
+<h1 class="text-xl font-bold my-4">Seasons List</h1>
+<table class="table-auto w-full bg-white">
+  <thead class="bg-gray-800 text-white">
+    <tr>
+      <th class="px-4 py-2">Season Name</th>
+      <th class="px-4 py-2">Year</th>
+      <th class="px-4 py-2">Anime Count</th>
+      <th class="px-4 py-2">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @seasons.each do |season| %>
+      <tr class="border-b">
+        <td class="border px-4 py-2"><%= season.name %></td>
+        <td class="border px-4 py-2"><%= season.year %></td>
+        <td class="border px-4 py-2"><%= season.animes.count %></td>
+        <td class="border px-4 py-2">
+          <%= link_to 'Show Animes', show_animes_season_path(season), class: "text-blue-500 hover:underline" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
