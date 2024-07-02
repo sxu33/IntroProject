@@ -1,6 +1,7 @@
-<!-- app/views/search/search.html.erb -->
+<!-- app/views/animes/search.html.erb -->
 <h1 class="text-xl font-bold my-4">Search Results</h1>
-<p>Your search for "<%= @query %>" found <%= @animes.count %> animes.</p>
+<p>Your search for "<%= params[:query] %>" found <%= @animes.size %> animes.</p>
+
 <table class="table-auto w-full bg-white">
   <thead class="bg-gray-800 text-white">
     <tr>

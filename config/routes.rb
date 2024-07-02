@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :animes, only: [:index, :show]
+  resources :animes, only: [:index, :show] do
+    collection do
+      get 'search'
+    end
+  end
 
   concern :anime_showable do
     member do
@@ -14,7 +18,7 @@ Rails.application.routes.draw do
       get 'show_anime'
     end
   end
-get 'search', to: 'search#search'
+
   get 'about', to: 'animes#about'
   root 'animes#index'
 end
