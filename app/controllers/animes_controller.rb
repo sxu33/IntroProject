@@ -15,9 +15,9 @@ def search
     @type_id = params[:type_id]
 
     if @type_id.present?
-      @animes = Anime.where("title LIKE ? AND type_id = ?", "%#{@query}%", @type_id)
+      @animes = Anime.where("title LIKE ? AND type_id = ?", "%#{@query}%", @type_id).page(params[:page]).per(10)
     else
-      @animes = Anime.where("title LIKE ?", "%#{@query}%")
+      @animes = Anime.where("title LIKE ?", "%#{@query}%").page(params[:page]).per(10)
     end
   end
 end
