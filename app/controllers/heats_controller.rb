@@ -1,6 +1,6 @@
 class HeatsController < ApplicationController
   def index
-    @heats = Heat.all
+    @heats = Heat.page(params[:page]).per(10)
   end
 
   def show_anime
