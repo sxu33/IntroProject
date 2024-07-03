@@ -1,6 +1,6 @@
 class SeasonsController < ApplicationController
   def index
-    @seasons = Season.all
+    @seasons = Season.page(params[:page]).per(10)
   end
 
   def show_animes
