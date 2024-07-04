@@ -11,9 +11,10 @@
     <h1 class="text-3xl font-bold mb-4"><%= @anime.title %></h1>
     <div class="space-y-2">
       <p><strong>ID:</strong> <%= @anime.id %></p>
-      <p><strong>Type:</strong> <%= @anime.type.name %></p>
-      <p><strong>Season:</strong> <%= @anime.season.name %></p>
+      <p><strong>Type:</strong> <%= link_to @anime.type.name, types_path, class: "text-blue-500 hover:underline" %></p>
+      <p><strong>Season:</strong> <%= link_to @anime.season.name, seasons_path, class: "text-blue-500 hover:underline" %></p>
       <p><strong>Year:</strong> <%= @anime.season.year %></p>
+      <p><strong>Heat:</strong> <%= link_to @anime.heat.value, heats_path, class: "text-blue-500 hover:underline" %></p>
       <p class="break-words"><strong>Background:</strong> <%= @anime.background %></p>
       <p><strong>Favorites:</strong> <%= @anime.favorites %></p>
     </div>
