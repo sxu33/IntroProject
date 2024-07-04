@@ -1,23 +1,18 @@
 <!-- app/views/animes/index.html.erb -->
-<h1 class="text-xl font-bold my-4">Anime List</h1>
-<table class="table-auto w-full bg-white">
-  <thead class="bg-gray-800 text-white">
-    <tr>
-      <th class="px-4 py-2">ID</th>
-      <th class="px-4 py-2">Title</th>
-      <th class="px-4 py-2">Actions</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="container mx-auto">
+  <h1 class="text-xl font-bold my-4">Anime List</h1>
+  <div class="grid grid-cols-2 gap-4">   
     <% @animes.each do |anime| %>
-      <tr class="border-b">
-        <td class="border px-4 py-2"><%= anime.id %></td>
-        <td class="border px-4 py-2"><%= anime.title %></td>
-        <td class="border px-4 py-2">
+      <div class="bg-white shadow-md rounded p-4">
+        <p class="border px-4 py-2"><strong>ID:</strong> <%= anime.id %></p>
+        <p class="border px-4 py-2"><strong>Title:</strong> <%= anime.title %></p>
+        <p class="border px-4 py-2">
           <%= link_to 'View Details', anime_path(anime), class: "text-blue-500 hover:underline" %>
-        </td>
-      </tr>
+        </p>
+      </div>
     <% end %>
-  </tbody>
-</table>
-<%= paginate @animes %>
+  </div>
+  <div class="mt-4">
+    <%= paginate @animes %>
+  </div>
+</div>
